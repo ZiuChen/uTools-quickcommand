@@ -61,7 +61,7 @@ import draggable from "vuedraggable";
 import { dbManager } from "js/utools.js";
 import { useCommandManager } from "js/commandManager.js";
 
-const FIXED_TAGS = ["未分类", "默认", "搜索结果"];
+const FIXED_TAGS = ["未分类", "默认", "搜索结果", "全部"];
 const TAG_ORDER_KEY = "cfg_tagOrder";
 
 export default {

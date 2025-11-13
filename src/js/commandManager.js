@@ -104,7 +104,7 @@ export function useCommandManager() {
   const getAllQuickCommandTags = () => {
     state.allQuickCommandTags = window.lodashM
       .union(...Object.values(state.allQuickCommands).map((x) => x.tags))
-      .concat(["未分类"])
+      .concat(["未分类", "全部"])
       .filter((x) => x);
   };
 

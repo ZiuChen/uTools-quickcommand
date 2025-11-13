@@ -32,7 +32,7 @@
           }"
           item-key="features.code"
           handle=".q-card"
-          :disabled="currentTag === '默认' || currentTag === '搜索结果'"
+          :disabled="currentTag === '默认' || currentTag === '搜索结果' || currentTag === '全部'"
         >
           <template #item="{ element: commandInfo }">
             <div
@@ -169,6 +169,8 @@ export default {
             searchResult.push(cmd);
           });
           return searchResult;
+        case "全部":
+          return sortByOrder(commands);
         case "默认":
           return commands.filter((cmd) => cmd.tags?.includes(this.currentTag));
         default:
