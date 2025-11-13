@@ -51,6 +51,9 @@
           所有没有添加标签的命令都会归在未分类 <br />
           可以在新建命令时在标签一栏选择或直接键入标签名来添加标签
         </q-tooltip>
+        <q-tooltip v-if="tag === '全部'">
+          显示所有命令，不进行标签筛选
+        </q-tooltip>
       </q-tab>
     </q-tabs>
   </q-scroll-area>
